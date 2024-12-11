@@ -58,16 +58,12 @@ const App = () => {
   }, [])
   
   if (isFetching) {
-    Swal.fire({
-      title: 'Loading...',
-      text: 'Mohon Tunggu',
-      allowOutsideClick: false,
-      didOpen: () => {
-        Swal.showLoading();
-      },
-    });
-  } else {
-    Swal.close();
+    return (
+      <div style={{ textAlign: 'center', marginTop: '20%' }}>
+        <h2>Loading...</h2>
+        <p>Mohon tunggu, sedang memproses autentikasi.</p>
+      </div>
+    );
   }
 
   return (
